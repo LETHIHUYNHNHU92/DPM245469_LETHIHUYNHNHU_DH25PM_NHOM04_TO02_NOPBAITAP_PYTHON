@@ -1,0 +1,7 @@
+{
+    "editor.suggest.snippetsPreventQuickSuggestions": true,
+    "editor.suggest.selectionMode": "never",
+    "editor.quickSuggestions": {
+        "other": "off"
+    }
+}
