@@ -1,0 +1,22 @@
+# Nhập x và n
+x = int(input("Nhập x: "))
+n = int(input("Nhập N: "))
+
+s = 0  # Tổng ban đầu
+
+# Vòng lặp i chạy từ 1 đến n
+for i in range(1, n + 1):
+    
+    # 1. Tính tử số (tu) = x^i
+    tu = x ** i
+    
+    # 2. Tính mẫu số (mau) = i!
+    mau = 1
+    for j in range(1, i + 1):
+        mau = mau * j
+        
+    # 3. Cộng số hạng (tu / mau) vào tổng
+    s = s + (tu / mau)
+
+# In kết quả
+print(f"s({x},{n}) = {s}")
