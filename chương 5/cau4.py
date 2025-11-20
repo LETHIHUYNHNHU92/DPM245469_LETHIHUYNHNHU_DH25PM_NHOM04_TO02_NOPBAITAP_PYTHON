@@ -53,4 +53,21 @@
 #[-1] duoc dinh nghia la phan tu cuoi cung cua list
 #[-2] la phan tu ap chot
 
+#count() dem so lan xuat hien cua phan tu trong list
+#vi du:list=[1,2,4,5,6,7,]
+#list.count(4) => dem so lan xuat hien cua 5 trong list
+
+#ham sap xep sort
+#list=[2,6,3,8,2,32,]
+#list.sort() => sap xep tang dan(mac dinh)
+#list.sort(reverse = true) => sap xep giam dan 
+# sort() :sap xep truc tiep tren list goc
+# sorted():sap xep tren list moi,list goc con nguyen
+#Vi du:lst_moi = sorted(lst)
+
+#remove xoa ki tu xuat hien dau tien trong list
+#vi du:list=[1,2,4,5,6,7,]
+#list.remove(4) =>list=[1,2,5,6,7]
+
+
 
