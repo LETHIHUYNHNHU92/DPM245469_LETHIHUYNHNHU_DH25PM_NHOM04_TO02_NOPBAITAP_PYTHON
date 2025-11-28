@@ -1,0 +1,12 @@
+{
+    "DM01": {
+        "Ten_DM": "& E:/Python/python.exe \"e:/Python new/DPM245469_LETHIHUYNHNHU_DH25PM_NHOM04_TO02_NOPBAITAP_PYTHON/chương 7/cau12.py\"",
+        "Products": [
+            {
+                "Mã": "SP2",
+                "Tên": "nhu",
+                "Giá": 67000.0
+            }
+        ]
+    }
+}
