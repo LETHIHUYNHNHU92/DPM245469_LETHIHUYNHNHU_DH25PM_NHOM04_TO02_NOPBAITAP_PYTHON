@@ -5,6 +5,7 @@ import sys
 # Dùng os.path.join để đảm bảo đường dẫn hoạt động trên mọi hệ điều hành
 FILE_PATH = os.path.join(os.path.dirname(__file__), "database_san_pham.txt")
 
+# --- HÀM GHI FILE ---
 def LuuFile(data):
     try:
         # Mở file ở chế độ 'a' (append) để ghi thêm vào cuối file
@@ -13,6 +14,7 @@ def LuuFile(data):
     except IOError:
         print("Lỗi: Không thể ghi vào file.")
 
+# --- HÀM ĐỌC FILE (ĐÃ SỬA LỖI LOGIC VÀ CÚ PHÁP) ---
 def DocFile(path): 
     arrProduct = [] 
     
@@ -34,7 +36,7 @@ def DocFile(path):
 
                 arr = data.split(';')
                 
-                # 2. KIỂM TRA VÀ CHUYỂN ĐỔI ĐƠN GIÁ
+                # 2. KIỂM TRA VÀ CHUYỂN ĐỔI ĐƠN GIÁ (Cần thiết cho hàm SortSp)
                 if len(arr) == 3:
                     try:
                         # Chuyển đổi Đơn giá (index 2) sang float
@@ -88,10 +90,15 @@ def SortSp(dssp):
 def main():
     print("--- QUẢN LÝ SẢN PHẨM (XỬ LÝ TẬP TIN) ---")
     
+    # Thử nhập một sản phẩm mới vào file
+    NhapSanPham()
+    
+    # Đọc List gốc
     dssp_goc = DocFile(FILE_PATH)
 
     XuatSanPham(dssp_goc, "SẢN PHẨM GỐC TỪ FILE")
     
+    # Sắp xếp và xuất (chức năng 3b)
     dssp_sap_xep = SortSp(dssp_goc)
     XuatSanPham(dssp_sap_xep, "SẢN PHẨM SAU KHI SẮP XẾP THEO GIÁ GIẢM DẦN")
 
